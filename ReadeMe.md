@@ -9,11 +9,12 @@ Following the provided UX/UI design mockup and user flow chart, this mobile-frie
 - [Back end git](https://github.com/cjmccaskill/travel-project-api)
 - [Heroku Deployment](https://git.heroku.com/act-travel-project-api.git)
 - [Front end git](https://github.com/cjmccaskill/travel-project)
-- [Vercel Deployment]()
+- [Vercel Deployment](https://travel-project-roan.vercel.app/)
 
 ### Wireframes and Architecture
 
 - Case Study/Wireframes: -[Travel UX/UI Case Study](https://www.behance.net/gallery/113994573/Travel-UX-UI-Case-Study)
+- React Architecture: -[Google Drawing](https://docs.google.com/drawings/d/109tQeno3x7RAncPOPWyMaAGegVcCYWDEcV__CNTLyWM/edit?usp=sharing)
 
 ### Time/Priority Matrix
 
