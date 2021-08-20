@@ -2,12 +2,14 @@
 
 ## Description
 
-Following the provided UX/UI design mockup and user flow chart, this mobile-friendly website provides users with information about different travel agency options and the packages each has on offer. The intended use is f
+Following the provided UX/UI design mockup and user flow chart, this mobile-friendly website provides users with information about different travel agency options and the packages each has on offer.
 
 ### Project Links
 
 - [Back end git](https://github.com/cjmccaskill/travel-project-api)
+- [Heroku Deployment](https://git.heroku.com/act-travel-project-api.git)
 - [Front end git](https://github.com/cjmccaskill/travel-project)
+- [Vercel Deployment]()
 
 ### Wireframes and Architecture
 
@@ -17,33 +19,47 @@ Following the provided UX/UI design mockup and user flow chart, this mobile-frie
 
 | Component                        | Priority | Estimated Time | Time Invested | Actual Time |
 | -------------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Git management                   |    H     |      8hrs      |     10hrs     |    10hrs    |
-| Q&A and bug fixes                |    H     |      4hrs      |     10hrs     |    10hrs    |
-| Connection                       |    H     |      1hr       |     1hrs      |    2hrs     |
-| Express                          |    H     |      1hr       |     1hrs      |    1hrs     |
-| Routes                           |    H     |      2hrs      |     2hrs      |    2hrs     |
-| Controllers                      |    H     |      3hrs      |     8hrs      |    8hrs     |
-| Seed                             |    H     |      4hrs      |     1hrs      |    1hrs     |
-| Deployment                       |    H     |      2hrs      |     1hrs      |    1hrs     |
-| Install and set up react router  |    H     |     0.5hrs     |    0.5hrs     |   0.5hrs    |
-| Switch, Links, Routes            |    H     |      2hrs      |     1hrs      |    1hrs     |
-| Header                           |    H     |      2hrs      |     2hrs      |    2hrs     |
-| Home Display List from Backend   |    H     |      4hrs      |     1hrs      |    1hrs     |
-| CRUD options                     |    H     |      6hrs      |     20hrs     |    20hrs    |
-| Create Form                      |    H     |      5hrs      |     10hrs     |    10hrs    |
-| Connecting Form to backend       |    H     |      4hrs      |     6hrs      |    6hrs     |
-| Presentation Outline             |    H     |      4hrs      |     1hrs      |    1hrs     |
-| Timer                            |    H     |      8hrs      |     7hrs      |    7hrs     |
-| Talking point synchronized timer |    H     |     4hr s      |     5hrs      |    5hrs     |
-| Responsiveness                   |    H     |      5hrs      |     8hrs      |    8hrs     |
-| Progress Bar                     |    L     |      5hrs      |     5hrs      |    5hrs     |
-| Timer Interface                  |    L     |      4hrs      |     6hrs      |    6hrs     |
-| Dark mode/lightmode              |    L     |      1hrs      |     3hrs      |    3hrs     |
-| Extra Styling                    |    L     |      2hrs      |     4hrs      |    4hrs     |
-| Talking points drop down menu    |    L     |      2hrs      |     0hrs      |    0hrs     |
-| Confetti                         |    L     |      2hrs      |     0hrs      |    0hrs     |
-| Alert                            |    L     |      1hrs      |     0hrs      |    0hrs     |
-| Total                            |    H     |    86.5hrs     |   114.5hrs    |  114.5hrs   |
+| Build Repositories               |    H     |     15mins     |      hrs      |     hrs     |
+| Add dependencies, folders, files |    H     |     15mins     |      hrs      |     hrs     |
+| Set up Heroku / Deploy           |    H     |     15mins     |      hrs      |     hrs     |
+| Connecting Server                |    H     |      1hrs      |      hrs      |     hrs     |
+| Routes                           |    H     |      2hrs      |      hrs      |     hrs     |
+| Controllers                      |    H     |      2hrs      |      hrs      |     hrs     |
+| Agents/Seed Data                 |    H     |      2hrs      |      hrs      |     hrs     |
+| Install and set up react router  |    H     |     15mins     |      hrs      |     hrs     |
+| Set up pages and components      |    H     |      2hrs      |      hrs      |     hrs     |
+| Switch, Links, Routes            |    H     |      2hrs      |      hrs      |     hrs     |
+| Header (Menu Button & Login)     |    H     |      3hrs      |      hrs      |     hrs     |
+| Search bar                       |    H     |      2hrs      |      hrs      |     hrs     |
+| Packages Display                 |    H     |      3hrs      |      hrs      |     hrs     |
+| List of Agencies                 |    H     |      3hrs      |      hrs      |     hrs     |
+| Reusable components on trip page |    H     |      3hrs      |      hrs      |     hrs     |
+| Signup/Login form                |    H     |      3hrs      |      hrs      |     hrs     |
+| Making everything communicates   |    H     |      2hrs      |      hrs      |     hrs     |
+| Group debugging                  |    H     |      3hrs      |      hrs      |     hrs     |
+| Responsiveness                   |    M     |      3hrs      |      hrs      |     hrs     |
+| Home Page Styling                |    M     |      3hrs      |      hrs      |     hrs     |
+| Agencies Page Styling            |    M     |      3hrs      |      hrs      |     hrs     |
+| Trip Details Page Styling        |    M     |      3hrs      |      hrs      |     hrs     |
+| User Page Styling                |    M     |      3hrs      |      hrs      |     hrs     |
+| Git pull requests/approval       |    H     |      4hrs      |      hrs      |     hrs     |
+| Group stand ups                  |    M     |      2hrs      |      hrs      |     hrs     |
+| Total                            |    H     |     55hrs      |      hrs      |     hrs     |
+
+| Component                      | Priority | Estimated Time | Time Invested | Actual Time |
+| ------------------------------ | :------: | :------------: | :-----------: | :---------: |
+| Trip Details multi-photo array |    H     |      3hrs      |      hrs      |     hrs     |
+| Google map API - backend       |    H     |      4hrs      |      hrs      |     hrs     |
+| Google map - front-end         |    H     |      3hrs      |      hrs      |     hrs     |
+| User wallet                    |    H     |      3hrs      |      hrs      |     hrs     |
+| Stripe API - backend           |    H     |      3hrs      |      hrs      |     hrs     |
+| Stripe - frontend              |    H     |      3hrs      |      hrs      |     hrs     |
+| Bookmarks                      |    H     |      3hrs      |      hrs      |     hrs     |
+| Booking component              |    H     |      2hrs      |      hrs      |     hrs     |
+| Pop up when booking complete   |    H     |      2hrs      |      hrs      |     hrs     |
+| Git pulls                      |    H     |      1hrs      |      hrs      |     hrs     |
+| Group stand ups                |    M     |      2hrs      |      hrs      |     hrs     |
+| Total                          |    H     |     26hrs      |      hrs      |     hrs     |
 
 ## MVP/Post-MVP
 
@@ -66,11 +82,11 @@ Frontend
 - Switch Routes in App (Home, Trip Details, Agency, User)
 - Header
   -Nav Bar
+  - Menu Button
+  - User Profile Button (Icon)
 - Footer
   - Copyright by us
 - Home Page
-  - Menu Button
-  - User Profile Button (Icon)
   - Search bar (if unavailable: no package available)
   - Popular Packages: Short list (3) of an example packages from agencies (pulled from API)
   - List of agencies (pulled from API)
@@ -84,18 +100,20 @@ Frontend
   - Non-functioning Book Now button
 - User Profile Page (pulled from API)
   - Form for login (username & password) + forgot password
+  - Simple Authorization
 - Styling each page
 
 ### Post-MVP
 
 - Trip Details
   - Multiple photos displayed in trip details
-  - Functioning Google Map (replace stock photo)
+  - Functioning Google Map API (replace stock photo)
   - Functioning Book Now button that takes user to Wallet (Stripe)
   - Bookmarks (favorites)
 - User Profile Page
   - Bookmarks Displayed
   - Wallet component
+  - Stripe API
 - Booking details page (onClick Book Now)
   - Booking component
   - Pop up (Thank you for booking with {agency name}!)
