@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Switch, Link, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import "./App.scss";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
@@ -29,7 +29,7 @@ function App() {
   const getAgents = async () => {
     const response = await fetch(url + "/agents");
     const data = await response.json();
-    setAgent(data);
+    setAgents(data);
   };
 
   useEffect(() => {
@@ -54,13 +54,17 @@ function App() {
             path="/agent/:id"
             render={(rp) => <Agents {...rp} selectAgent={selectAgent} />}
           />
+          <Route exact path="/user" render={(rp) => <UserProfile {...rp} />} />
           <Route
             exact
-            path="/user/userProfile"
-            render={(rp) => <UserProfile {...rp} />}
+            path="/user/Login"
+            render={(rp) => <UserLogin {...rp} />}
           />
-          <Route path="/user/Login" render={(rp) => <UserLogin {...rp} />} />
-          <Route path="/user/SignUp" render={(rp) => <UserLogin {...rp} />} />
+          <Route
+            exact
+            path="/user/SignUp"
+            render={(rp) => <UserLogin {...rp} />}
+          />
         </Switch>
       </main>
       <Footer />
