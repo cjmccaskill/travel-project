@@ -27,7 +27,7 @@ function App() {
   const [agents, setAgents] = useState([]);
 
   const getAgents = async () => {
-    const response = await fetch(url + "/agents");
+    const response = await fetch(url + "/agent");
     const data = await response.json();
     setAgents(data);
   };
