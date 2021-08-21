@@ -1,5 +1,5 @@
 import React from "react";
-import "./Form.css";
+import "./Form.scss";
 
 const Form = () => {
   return <div>Travel Form Comp</div>;
