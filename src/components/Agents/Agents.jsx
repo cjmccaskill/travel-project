@@ -1,8 +1,8 @@
 import React from "react";
-import "./Agencies.scss";
+import "./Agents.scss";
 
-const Agencies = () => {
+const Agents = () => {
   return <div>The top Agencies in the world!</div>;
 };
 
-export default Agencies;
+export default Agents;
