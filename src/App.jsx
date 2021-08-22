@@ -8,7 +8,8 @@ import Packages from "./components/Packages/Packages";
 import Home from "./pages/Home/Home";
 
 function App() {
-  const url = "https://act-travel-project-api.herokuapp.com/";
+  // const url = "https://act-travel-project-api.herokuapp.com";
+  const url = "http://localhost:4500";
 
   // Call the TripDetails API
   const [packages, setPackages] = useState([]);
@@ -16,11 +17,11 @@ function App() {
   const getPackages = async () => {
     const response = await fetch(url + "/tripDetails");
     const data = await response.json();
-    setPackage(data);
+    setPackages(data);
   };
 
   useEffect(() => {
-    getPackages;
+    getPackages();
   }, []);
 
   // Call to Agents API
@@ -33,7 +34,7 @@ function App() {
   };
 
   useEffect(() => {
-    getAgents;
+    getAgents();
   }, []);
 
   return (
