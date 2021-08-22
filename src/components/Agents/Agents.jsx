@@ -8,7 +8,7 @@ const Agents = (props) => {
     <div className="agent-container">
       {agents.map((agent) => (
         <div key={agent._id}>
-          <div>{agent.img}</div>
+          <img src={agent.img} alt={agent.name} />
           <div>{agent.name}</div>
           <div>{agent.contactInfo[0]}</div>
         </div>
