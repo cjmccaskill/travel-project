@@ -36,9 +36,9 @@ const Header = () => {
             <li key={nav.text}>
               <Link
                 to={nav.link}
-                activeClassName="active-link"
+                className="active-link"
                 onClick={() => hideMenu()}
-                exact
+                exact="true"
               >
                 {nav.text}
               </Link>
