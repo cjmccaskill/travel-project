@@ -10,7 +10,7 @@ const FeaturedPackages = (props) => {
     <>
       <div className="pkgs-header">
         <h1>Packages</h1>
-        <Link to="/tripdetails" className="see-pkgs">
+        <Link to="/tripDetails" className="see-pkgs">
           See All
         </Link>
       </div>
