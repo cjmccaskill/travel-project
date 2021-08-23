@@ -1,7 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./Agent.scss";
-import { FaPaperPlane, FaGithub, FaGlobeAmericas } from "react-icons/fa";
+import { FaPaperPlane, FaLinkedin, FaGlobeAmericas } from "react-icons/fa";
 
 const Agent = (props) => {
   const url = `https://act-travel-project-api.herokuapp.com/agent/${props.match.params.id}`;
@@ -26,9 +27,15 @@ const Agent = (props) => {
         <div>{agent.packages}</div>
         <div>{agent.bio}</div>
         <div>
-          <FaPaperPlane {...agent.contactInfo} />
-          <FaGithub {...agent.contactInfo} />
-          <FaGlobeAmericas {...agent.contactInfo} />
+          <Link to={agent.contactInfo}>
+            <FaPaperPlane />
+          </Link>
+          <Link to={agent.contactInfo}>
+            <FaLinkedin />
+          </Link>
+          <Link to={agent.contactInfo}>
+            <FaGlobeAmericas />
+          </Link>
         </div>
       </div>
     </div>
