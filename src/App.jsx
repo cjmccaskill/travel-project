@@ -7,6 +7,7 @@ import Packages from "./components/Packages/Packages";
 import Home from "./pages/Home/Home";
 import Agent from "./pages/Agent/Agent";
 import Agents from "./components/Agents/Agents";
+import TripDetails from "./pages/TripDetails/TripDetails";
 
 function App() {
   const url = "https://act-travel-project-api.herokuapp.com";
@@ -48,10 +49,13 @@ function App() {
           <Route exact path="/agent">
             <Agents agents={agents} />
           </Route>
+          <Route exact path="/tripDetails">
+            <Packages packages={packages} />
+          </Route>
           <Route
             exact
             path="/tripDetails/:id"
-            render={(rp) => <Packages {...rp} />}
+            render={(rp) => <TripDetails {...rp} />}
           />
           <Route exact path="/agent/:id" render={(rp) => <Agent {...rp} />} />
           <Route exact path="/user" render={(rp) => <UserProfile {...rp} />} />
