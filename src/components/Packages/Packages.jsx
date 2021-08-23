@@ -9,7 +9,11 @@ const Packages = (props) => {
       <h1>Trip Packages</h1>
       <div className="pkgs-container">
         {packages.map((pkg) => (
-          <Link to="/tripDetails/_id" className="pkg-card" key={pkg._id}>
+          <Link
+            to={`/tripDetails/${pkg._id}`}
+            className="pkg-card"
+            key={pkg._id}
+          >
             <img src={pkg.img} alt={pkg.name} className="pkg-img" />
             <div className="pkg-info">
               <h1>{pkg.name}</h1>
