@@ -1,6 +1,5 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Route } from "react-router-dom";
 import "./Agent.scss";
 import { FaPaperPlane, FaLinkedin, FaGlobeAmericas } from "react-icons/fa";
 
@@ -27,16 +26,16 @@ const Agent = (props) => {
         <div>{agent.packages}</div>
         <div>{agent.bio}</div>
         <div>
-          <Route path={agent.email}>
-            <FaPaperPlane />
-          </Route>
-          <Route path={agent.linkedIn}>
-            <FaLinkedin />
-          </Route>
-          <Route path={agent.website}>
-            <FaGlobeAmericas />
-          </Route>
-        </div>
+            <a href={agent.email}>
+              <FaPaperPlane />
+            </a>
+            <a href={agent.linkedIn}>
+              <FaLinkedin />
+            </a>
+            <a href={agent.website}>
+              <FaGlobeAmericas />
+            </a>
+          </div>
       </div>
     </div>
   );

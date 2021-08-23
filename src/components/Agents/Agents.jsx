@@ -13,9 +13,15 @@ const Agents = (props) => {
           <div>{agent.packages}</div>
           <div>{agent.bio}</div>
           <div>
-            <FaPaperPlane {...agent.email} />
-            <FaLinkedin {...agent.linkedIn} />
-            <FaGlobeAmericas {...agent.website} />
+            <a href={agent.email}>
+              <FaPaperPlane />
+            </a>
+            <a href={agent.linkedIn}>
+              <FaLinkedin />
+            </a>
+            <a href={agent.website}>
+              <FaGlobeAmericas />
+            </a>
           </div>
         </div>
       ))}
