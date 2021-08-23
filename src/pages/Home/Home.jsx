@@ -5,7 +5,6 @@ import Packages from "../../components/Packages/Packages";
 import Agents from "../../components/Agents/Agents";
 
 const Home = (props) => {
-  console.log("Home props", props)
   return (
     <div className="home-container">
       <SearchBar />
