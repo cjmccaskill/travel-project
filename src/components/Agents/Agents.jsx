@@ -1,5 +1,5 @@
 import React from "react";
-import { FaPaperPlane, FaGithub, FaGlobeAmericas } from "react-icons/fa";
+import { FaPaperPlane, FaLinkedin, FaGlobeAmericas } from "react-icons/fa";
 import "./Agents.scss";
 
 const Agents = (props) => {
@@ -13,9 +13,9 @@ const Agents = (props) => {
           <div>{agent.packages}</div>
           <div>{agent.bio}</div>
           <div>
-            <FaPaperPlane {...agent.contactInfo} />
-            <FaGithub {...agent.contactInfo} />
-            <FaGlobeAmericas {...agent.contactInfo} />
+            <FaPaperPlane {...agent.email} />
+            <FaLinkedin {...agent.linkedIn} />
+            <FaGlobeAmericas {...agent.website} />
           </div>
         </div>
       ))}
