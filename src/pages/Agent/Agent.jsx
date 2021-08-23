@@ -4,13 +4,14 @@ import "./Agent.scss";
 import { FaPaperPlane, FaGithub, FaGlobeAmericas } from "react-icons/fa";
 
 const Agent = (props) => {
-  console.log("The selected agent", props);
+  // const url = `https://act-travel-project-api.herokuapp.com/agent/${props.match.params.id}`;
   const url = `http://localhost:4500/agent/${props.match.params.id}`;
-  const [agent, setAgent] = useState({});
+
+  const [agent, setAgent] = useState();
 
   const getAgents = async () => {
     const response = await fetch(url);
-    const data = response.json();
+    const data = await response.json();
     setAgent(data);
   };
 
@@ -20,17 +21,17 @@ const Agent = (props) => {
 
   return (
     <div className="agent-container">
-      <div className="agent-card" key={agent._id}>
-        <div>Hello I am here{agent.name}</div>
-        {/* <img src={agent.img} alt={agent.name} /> */}
-        {/* <div>{agent.name}</div> */}
-        {/* <div>{agent.packages}</div>
-          <div>{agent.bio}</div>
-          <div>
-            <FaPaperPlane {...agent.contactInfo[0]} />
-            <FaGithub {...agent.contactInfo[1]} />
-            <FaGlobeAmericas {...agent.contactInfo[2]} />
-          </div> */}
+      <div className="agent-card" key={""}>
+        {/* <div>Hello I am here</div> */}
+        <img src={agent.img} alt={agent.name} />
+        <div>{agent.name}</div>
+        <div>{agent.packages}</div>
+        <div>{agent.bio}</div>
+        <div>
+          <FaPaperPlane {...agent.contactInfo} />
+          <FaGithub {...agent.contactInfo} />
+          <FaGlobeAmericas {...agent.contactInfo} />
+        </div>
       </div>
     </div>
   );

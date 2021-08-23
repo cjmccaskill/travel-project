@@ -3,7 +3,6 @@ import { Switch, Route } from "react-router-dom";
 import "./App.scss";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import Agents from "./components/Agents/Agents";
 import Packages from "./components/Packages/Packages";
 import Home from "./pages/Home/Home";
 import Agent from "./pages/Agent/Agent";
