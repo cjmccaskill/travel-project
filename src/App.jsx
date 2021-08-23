@@ -6,10 +6,10 @@ import Footer from "./components/Footer/Footer";
 import Packages from "./components/Packages/Packages";
 import Home from "./pages/Home/Home";
 import Agent from "./pages/Agent/Agent";
+import Agents from "./components/Agents/Agents";
 
 function App() {
-  // const url = "https://act-travel-project-api.herokuapp.com";
-  const url = "http://localhost:4500";
+  const url = "https://act-travel-project-api.herokuapp.com";
 
   // Call the TripDetails API
   const [packages, setPackages] = useState([]);
@@ -43,21 +43,17 @@ function App() {
       <main>
         <Switch>
           <Route exact path="/">
-            <Home
-              packages={packages}
-              agents={agents}
-            />
+            <Home packages={packages} agents={agents} />
+          </Route>
+          <Route exact path="/agent">
+            <Agents agents={agents} />
           </Route>
           <Route
             exact
             path="/tripDetails/:id"
             render={(rp) => <Packages {...rp} />}
           />
-          <Route
-            exact
-            path="/agent/:id"
-            render={(rp) => <Agent {...rp} />}
-          />
+          <Route exact path="/agent/:id" render={(rp) => <Agent {...rp} />} />
           <Route exact path="/user" render={(rp) => <UserProfile {...rp} />} />
           <Route
             exact

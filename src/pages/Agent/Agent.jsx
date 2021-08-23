@@ -4,10 +4,9 @@ import "./Agent.scss";
 import { FaPaperPlane, FaGithub, FaGlobeAmericas } from "react-icons/fa";
 
 const Agent = (props) => {
-  // const url = `https://act-travel-project-api.herokuapp.com/agent/${props.match.params.id}`;
-  const url = `http://localhost:4500/agent/${props.match.params.id}`;
+  const url = `https://act-travel-project-api.herokuapp.com/agent/${props.match.params.id}`;
 
-  const [agent, setAgent] = useState();
+  const [agent, setAgent] = useState({});
 
   const getAgents = async () => {
     const response = await fetch(url);
@@ -22,7 +21,6 @@ const Agent = (props) => {
   return (
     <div className="agent-container">
       <div className="agent-card" key={""}>
-        {/* <div>Hello I am here</div> */}
         <img src={agent.img} alt={agent.name} />
         <div>{agent.name}</div>
         <div>{agent.packages}</div>
