@@ -1,8 +1,8 @@
 import React from "react";
 import "./SignUp.scss";
 
-const SignUp = () => {
-  const url = `https://act-travel-project-api.herokuapp.com/user/signup`;
+const SignUp = (props) => {
+  const url = `https://act-travel-project-api.herokuapp.com`;
 
   const blank = {
     fullName: "",
@@ -40,7 +40,7 @@ const SignUp = () => {
       <form onSubmit={handleSubmit}>
       <input
           type="text"
-          name="Full Name"
+          name="fullName"
           value={form.fullName}
           onChange={handleChange}
         />
@@ -55,6 +55,10 @@ const SignUp = () => {
           name="password"
           value={form.password}
           onChange={handleChange}
+        />
+         <input
+          type="submit"
+          value="Sign Up!"
         />
       </form>
     </div>
