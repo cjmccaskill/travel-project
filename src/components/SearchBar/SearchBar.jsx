@@ -1,8 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { BsSearch } from "react-icons/bs";
 import "./SearchBar.scss";
 
 const SearchBar = () => {
-  return <div>Input field and search button</div>;
+  const url = `https://act-travel-project-api.herokuapp.com/tripDetails`;
+
+  const [query, setQuery] = useState([]);
+
+  const getData = async () => {
+    const response = await fetch(url);
+    const data = await response.json();
+    setQuery(data);
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  return (
+    <div className="search-container">
+      <label htmlFor="search">
+        <BsSearch />
+      </label>
+      <input id="search" type="text" placeholder="Packages" />
+    </div>
+  );
 };
 
 export default SearchBar;
