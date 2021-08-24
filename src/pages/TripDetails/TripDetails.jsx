@@ -7,9 +7,9 @@ import { RiBookmark2Line } from "react-icons/ri";
 import "./TripDetails.scss";
 
 const TripDetails = (props) => {
-  const url = `https://act-travel-project-api.herokuapp.com/agent/${props.match.params.id}`;
+  const url = `https://act-travel-project-api.herokuapp.com/tripdetails/${props.match.params.id}`;
 
-  const [pkg, setPkg] = useState(props.id);
+  const [pkg, setPkg] = useState({});
   const [agent, setAgent] = useState({});
 
   const getPkgs = async () => {
