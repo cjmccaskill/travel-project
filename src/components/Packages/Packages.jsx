@@ -16,7 +16,7 @@ const Packages = (props) => {
           >
             <img src={pkg.img} alt={pkg.name} className="pkg-img-tripdetails" />
             <div className="pkg-info-tripdetails">
-              <h1>{pkg.name}</h1>
+              <h1>{pkg.packageName}</h1>
               <div className="pkg-dates-tripdetails">{pkg.dates}</div>
             </div>
             <div className="price-tripdetails">
