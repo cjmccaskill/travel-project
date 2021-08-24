@@ -3,12 +3,13 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { FaPaperPlane, FaDotCircle } from "react-icons/fa";
 import { AiFillStar } from "react-icons/ai";
+import { RiBookmark2Line } from "react-icons/ri";
 import "./TripDetails.scss";
 
 const TripDetails = (props) => {
   const url = `https://act-travel-project-api.herokuapp.com/agent/${props.match.params.id}`;
 
-  const [pkg, setPkg] = useState({});
+  const [pkg, setPkg] = useState(props.id);
   const [agent, setAgent] = useState({});
 
   const getPkgs = async () => {
@@ -31,7 +32,7 @@ const TripDetails = (props) => {
   }, []);
 
   return (
-    <div className="trip-pkg-container">
+    <div className="trip-pkg-card" key={""}>
       <img src={pkg.img} alt={pkg.name} className="pkg-img" />
       <RiBookmark2Line className="bookmark" />
       <div className="pkg-info">
@@ -49,11 +50,11 @@ const TripDetails = (props) => {
         </div>
       </Link>
       <div className="included">
-        <div classname="transport">
+        <div className="transport">
           <FaDotCircle>{pkg.vehicle}</FaDotCircle>
           Transport
         </div>
-        <div classname="hotel">
+        <div className="hotel">
           <FaDotCircle>{pkg.vehicle}</FaDotCircle>
           Hotel
         </div>
