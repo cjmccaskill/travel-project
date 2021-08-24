@@ -7,6 +7,7 @@ import Packages from "./components/Packages/Packages";
 import Home from "./pages/Home/Home";
 import Agent from "./pages/Agent/Agent";
 import Agents from "./components/Agents/Agents";
+import SignUp from "./pages/SignUp/SignUp";
 
 function App() {
   const url = "https://act-travel-project-api.herokuapp.com";
@@ -37,6 +38,19 @@ function App() {
     getAgents();
   }, []);
 
+  // Call to Users API
+  const [users, setUsers] = useState([]);
+
+  const getUsers = async () => {
+    const response = await fetch(url + "/user");
+    const data = await response.json();
+    setUsers(data);
+  };
+
+  useEffect(() => {
+    getUsers();
+  }, []);
+
   return (
     <div className="App">
       <Header />
@@ -62,8 +76,8 @@ function App() {
           />
           <Route
             exact
-            path="/user/SignUp"
-            render={(rp) => <UserLogin {...rp} />}
+            path="/user/signup"
+            render={(rp) => <SignUp {...rp} />}
           />
         </Switch>
       </main>
