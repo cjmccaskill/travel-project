@@ -7,7 +7,7 @@ const FeaturedAgents = (props) => {
   return (
     <>
       <div className="agents-header">
-        <h1>Tavel Agents</h1>
+        <h1>Travel Agents</h1>
         <Link to="/agent" className="see-agents">
           See All
         </Link>
