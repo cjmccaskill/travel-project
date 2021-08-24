@@ -1,8 +1,8 @@
 import React from "react";
-import "./Footer.scss";
+import "./Footer.css";
 
 const Footer = () => {
-  return <div>Travel Footer Comp</div>;
+  return <div>Copyright ACT Travel Group</div>;
 };
 
 export default Footer;
