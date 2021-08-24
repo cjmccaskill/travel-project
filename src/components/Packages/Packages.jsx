@@ -7,19 +7,19 @@ const Packages = (props) => {
   return (
     <div>
       <h1>Trip Packages</h1>
-      <div className="pkgs-container">
+      <div className="tripdetails-container">
         {packages.map((pkg) => (
           <Link
             to={`/tripDetails/${pkg._id}`}
-            className="pkg-card"
+            className="pkg-tripdetails"
             key={pkg._id}
           >
-            <img src={pkg.img} alt={pkg.name} className="pkg-img" />
-            <div className="pkg-info">
+            <img src={pkg.img} alt={pkg.name} className="pkg-img-tripdetails" />
+            <div className="pkg-info-tripdetails">
               <h1>{pkg.name}</h1>
-              <div className="pkg-dates">{pkg.dates}</div>
+              <div className="pkg-dates-tripdetails">{pkg.dates}</div>
             </div>
-            <div className="price-bubble">
+            <div className="price-tripdetails">
               <h1>$</h1>
               {pkg.payment}
             </div>

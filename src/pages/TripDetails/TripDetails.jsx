@@ -32,42 +32,44 @@ const TripDetails = (props) => {
   }, []);
 
   return (
-    <div className="trip-pkg-card" key={""}>
-      <img src={pkg.img} alt={pkg.name} className="pkg-img" />
-      <RiBookmark2Line className="bookmark" />
-      <div className="pkg-info">
-        <h1>{pkg.name}</h1>
-        <AiFillStar className="star">4.9 (312)</AiFillStar>
-        <a href={agent.email}>
-          <FaPaperPlane />
-        </a>
-      </div>
-      <Link to="/agent" className="agent-info">
-        <div>{agent.img}</div>
-        <div>
-          <div>Hosted by</div>
-          <div>{agent.name}</div>
+    <div className="trip-pkg-container">
+      <div className="trip-pkg-card" key={""}>
+        <img src={pkg.img} alt={pkg.name} className="trip-pkg-img" />
+        <RiBookmark2Line className="bookmark" />
+        <div className="trip-pkg-info">
+          <h1>{pkg.name}</h1>
+          <AiFillStar className="star">4.9 (312)</AiFillStar>
+          <a href={agent.email}>
+            <FaPaperPlane />
+          </a>
         </div>
-      </Link>
-      <div className="included">
-        <div className="transport">
-          <FaDotCircle>{pkg.vehicle}</FaDotCircle>
-          Transport
+        <Link to="/agent" className="trip-agent-info">
+          <div>{agent.img}</div>
+          <div>
+            <div>Hosted by</div>
+            <div>{agent.name}</div>
+          </div>
+        </Link>
+        <div className="included">
+          <div className="transport">
+            <FaDotCircle>{pkg.vehicle}</FaDotCircle>
+            Transport
+          </div>
+          <div className="hotel">
+            <FaDotCircle>{pkg.vehicle}</FaDotCircle>
+            Hotel
+          </div>
+          <div className="trip-img-arr">{pkg.imgArr}</div>
+          <img src="" />
         </div>
-        <div className="hotel">
-          <FaDotCircle>{pkg.vehicle}</FaDotCircle>
-          Hotel
+        <div className="price">
+          <div className="cost">
+            <p className="tc">Total Cost</p>
+            <h1>${pkg.payment}</h1>
+            <p>/Person</p>
+          </div>
+          <button className="book-now">Book Now</button>
         </div>
-        <div className="img-arr">{pkg.imgArr}</div>
-        <img src="" />
-      </div>
-      <div className="price">
-        <div className="cost">
-          <p className="tc">Total Cost</p>
-          <h1>${pkg.payment}</h1>
-          <p>/Person</p>
-        </div>
-        <button className="book-now">Book Now</button>
       </div>
     </div>
   );
