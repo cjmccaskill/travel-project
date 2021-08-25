@@ -1,29 +1,32 @@
 .search-container {
-  display: flex;
-  justify-content: start;
-  align-items: flex-end;
   background-color: whitesmoke;
   border-radius: 25px;
   width: 46vw;
   border: 1px solid gray;
   margin: 0 auto;
 
-  button {
-    font-size: 1.4rem;
-    padding-right: 3px;
-    padding-top: 5px;
-    border-radius: 50px;
-    width: 38px;
-    background-color:  rgb(25, 185, 193);
-  }
+  form {
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
 
-  #search {
-    margin-left: 3px;
-    padding-left: 5px;
-    width: 90%;
-    height: 2.7em;
-    border: none;
-    border-radius: 25px;
-    background-color: whitesmoke;
+    button {
+      font-size: 1.4rem;
+      padding-right: 3px;
+      padding-top: 5px;
+      border-radius: 50px;
+      width: 38px;
+      background-color: rgb(25, 185, 193);
+    }
+
+    #search {
+      margin-left: 3px;
+      padding-left: 5px;
+      width: 90%;
+      height: 2.7em;
+      border: none;
+      border-radius: 25px;
+      background-color: whitesmoke;
+    }
   }
 }

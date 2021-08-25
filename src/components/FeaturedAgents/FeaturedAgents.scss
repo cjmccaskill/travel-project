@@ -2,25 +2,25 @@ a {
   text-decoration: none;
 }
 
-.agents-header {
+.featured-agents-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 20px;
 
-  .see-agents {
+  .featured-see-agents {
     text-decoration: none;
     font-size: 1.1rem;
     color: rgb(100, 100, 100);
   }
 }
 
-.card-container {
+.featured-card-container {
   display: flex;
   justify-content: space-between;
 }
 
-.agent-container {
+.featured-agent-container {
   padding: 15px;
   box-shadow: 1px 1px 10px 4px rgba(128, 128, 128, 0.342);
   border-radius: 15px;
@@ -30,19 +30,19 @@ a {
   background-color: whitesmoke;
 }
 
-.agent-img {
+.featured-agent-img {
   width: 8rem;
   height: 8rem;
   border-radius: 100%;
 }
 
-.agent-card {
+.featured-agent-card {
   display: flex;
   justify-content: space-between;
   padding-top: 15px;
 }
 
-.card-info {
+.featured-card-info {
   padding-top: 30px;
   text-align: center;
   width: 9rem;
@@ -50,7 +50,7 @@ a {
   color: black;
 }
 
-.more-info {
+.featured-more-info {
   color: rgb(0, 0, 158);
   font-weight: 700;
 }
