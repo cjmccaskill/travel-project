@@ -17,7 +17,7 @@ const Header = () => {
   const navigation = [
     { link: "/", text: "Home" },
     { link: "/tripdetails", text: "Shop Packages" },
-    { link: "/agent", text: "Explore Agents" },
+    { link: "/agents", text: "Explore Agents" },
     { link: "/user/userprofile", text: "My Account" },
   ];
   return (
