@@ -10,7 +10,7 @@ const Agents = (props) => {
         <div className="agent-card" key={agent._id}>
           <img src={agent.img} alt={agent.name} />
           <div>{agent.name}</div>
-          <div>{agent.packages}</div>
+          {/* <div>{agent.packages}</div> */}
           <div>{agent.bio}</div>
           <div>
             <a href={agent.email}>

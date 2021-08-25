@@ -46,7 +46,7 @@ function App() {
           <Route exact path="/">
             <Home packages={packages} agents={agents} />
           </Route>
-          <Route exact path="/agent">
+          <Route exact path="/agents">
             <Agents agents={agents} />
           </Route>
           <Route exact path="/tripDetails">

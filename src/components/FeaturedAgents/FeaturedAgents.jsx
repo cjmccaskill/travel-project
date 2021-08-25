@@ -8,7 +8,7 @@ const FeaturedAgents = (props) => {
     <>
       <div className="agents-header">
         <h1>Travel Agents</h1>
-        <Link to="/agent" className="see-agents">
+        <Link to="/agents" className="see-agents">
           See All
         </Link>
       </div>
