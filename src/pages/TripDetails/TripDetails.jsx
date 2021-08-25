@@ -7,13 +7,13 @@ import { RiBookmark2Line } from "react-icons/ri";
 import "./TripDetails.scss";
 
 const TripDetails = (props) => {
-  const url = `https://act-travel-project-api.herokuapp.com/tripdetails/${props.match.params.id}`;
-
+  // call the trip details API
   const [pkg, setPkg] = useState({});
-  const [agent, setAgent] = useState({});
 
   const getPkgs = async () => {
-    const response = await fetch(url);
+    const response = await fetch(
+      `https://act-travel-project-api.herokuapp.com/tripdetails/${props.match.params.id}`
+    );
     const data = await response.json();
     setPkg(data);
   };
@@ -22,32 +22,43 @@ const TripDetails = (props) => {
     getPkgs();
   }, []);
 
-  const getAgents = async () => {
-    const response = await fetch(url);
-    const data = await response.json();
-    setAgent(data);
-  };
-  useEffect(() => {
-    getAgents();
-  }, []);
+  // call the agents API
+  // const [agent, setAgent] = useState({});
+
+  // const getAgents = async () => {
+  //   const response = await fetch(
+  //     `https://act-travel-project-api.herokuapp.com/agent`
+  //   );
+  //   const data = await response.json();
+  //   setAgent(data);
+  // };
+
+  // useEffect(() => {
+  //   if (!pkg.data) {
+  //     getPkgs();
+  //   }
+  //   if (agent.data) {
+  //     getAgents();
+  //   }
+  // }, []);
 
   return (
     <div className="trip-pkg-container">
       <div className="trip-pkg-card" key={""}>
-        <img src={pkg.img} alt={pkg.name} className="trip-pkg-img" />
-        <RiBookmark2Line className="bookmark" />
+        <img src={pkg.img} alt={pkg.packageName} className="trip-pkg-img" />
         <div className="trip-pkg-info">
-          <h1>{pkg.name}</h1>
-          <AiFillStar className="star">4.9 (312)</AiFillStar>
-          <a href={agent.email}>
+          <RiBookmark2Line className="bookmark" />
+          <h1>{pkg.packageName}</h1>
+          <AiFillStar className="star">4.9</AiFillStar>
+          {/* <a href={pkg.packages.agentInfo.email}>
             <FaPaperPlane />
-          </a>
+          </a> */}
         </div>
-        <Link to="/agent" className="trip-agent-info">
-          <div>{agent.img}</div>
+        <Link to="/agent/:id" className="trip-agent-info">
+          {/* <div>{agentInfo.img}</div> */}
           <div>
             <div>Hosted by</div>
-            <div>{agent.name}</div>
+            {/* <div>{pkg.packages.agentInfo.name}</div> */}
           </div>
         </Link>
         <div className="included">
@@ -59,8 +70,7 @@ const TripDetails = (props) => {
             <FaDotCircle>{pkg.vehicle}</FaDotCircle>
             Hotel
           </div>
-          <div className="trip-img-arr">{pkg.imgArr}</div>
-          <img src="" />
+          <div className="trip-photos-arr">{pkg.photos}</div>
         </div>
         <div className="price">
           <div className="cost">
