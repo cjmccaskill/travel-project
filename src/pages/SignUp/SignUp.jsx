@@ -1,14 +1,11 @@
 import React from "react";
-import { GlobalCtx } from "../../App";
-import "./UserLogin.scss";
+import "./SignUp.scss";
 
-const UserLogin = (props) => {
+const SignUp = (props) => {
+  const url = `https://act-travel-project-api.herokuapp.com`;
 
-  const { gState, setGState } = React.useContext(GlobalCtx)
-  
-  const { url } = gState
-  
   const blank = {
+    fullName: "",
     username: "",
     password: "",
   }
@@ -21,28 +18,32 @@ const UserLogin = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    const { username, password } = form
+    const { fullName, username, password } = form
   
-    fetch(`${url}/user/login`, {
+    fetch(`${url}/user/signup`, {
       method: "post",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({username, password}),
+      body: JSON.stringify({fullName, username, password}),
     })
       .then((response) => response.json())
       .then((data) => {
         console.log(data)
-        window.localStorage.setItem("token", JSON.stringify(data))
-        setGState({ ...gState, token: data.token })
         setForm(blank)
-        props.history.push("/")
+        props.history.push("/user/login")
       })
   }
 
   return (
     <div>
       <form onSubmit={handleSubmit}>
+      <input
+          type="text"
+          name="fullName"
+          value={form.fullName}
+          onChange={handleChange}
+        />
         <input
           type="text"
           name="username"
@@ -57,11 +58,11 @@ const UserLogin = (props) => {
         />
          <input
           type="submit"
-          value="Login"
+          value="Sign Up!"
         />
       </form>
     </div>
   )
 };
 
-export default UserLogin;
+export default SignUp;
