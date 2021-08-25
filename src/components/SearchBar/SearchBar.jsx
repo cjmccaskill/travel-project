@@ -19,9 +19,9 @@ const SearchBar = () => {
 
   return (
     <div className="search-container">
-      <label htmlFor="search">
+      <button htmlFor="search">
         <BsSearch />
-      </label>
+      </button>
       <input id="search" type="text" placeholder="Packages" />
     </div>
   );

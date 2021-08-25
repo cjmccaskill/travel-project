@@ -1,19 +1,28 @@
 .search-container {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: flex-end;
-  //   text-align: center;
+  background-color: whitesmoke;
+  border-radius: 25px;
+  width: 46vw;
+  border: 1px solid gray;
+  margin: 0 auto;
 
-  label {
+  button {
     font-size: 1.4rem;
     padding-right: 3px;
     padding-top: 5px;
+    border-radius: 50px;
+    width: 38px;
+    background-color: rgba(70, 150, 187, 0.788);
   }
 
   #search {
-    padding-left: 10px;
-    width: 45vw;
-    height: 2.5em;
+    margin-left: 3px;
+    padding-left: 5px;
+    width: 90%;
+    height: 2.7em;
+    border: none;
     border-radius: 25px;
     background-color: whitesmoke;
   }
