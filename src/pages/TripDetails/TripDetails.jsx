@@ -20,6 +20,7 @@ const TripDetails = (props) => {
 
   useEffect(() => {
     getPkgs();
+    // .then((data) => setPkg(data))
   }, []);
 
   const loadedPkg = () => {
@@ -31,15 +32,15 @@ const TripDetails = (props) => {
             <RiBookmark2Line className="bookmark" />
             <h1>{pkg.packageName}</h1>
             <AiFillStar className="star">4.9</AiFillStar>
-            {/* <a href={pkg.packages.agentInfo.email}>
+            <a href={pkg.agentInfo?.email}>
               <FaPaperPlane />
-            </a> */}
+            </a>
           </div>
           <Link to="/agent/:id" className="trip-agent-info">
-            {/* <img src={pkg.agentInfo.img} alt="" /> */}
+            <img src={pkg.agentInfo?.img} alt="" />
             <div>
               <div>Hosted by</div>
-              {/* <div>{pkg.agentInfo.name}</div> */}
+              <div>{pkg.agentInfo?.name}</div>
             </div>
           </Link>
           <div className="included">
@@ -69,7 +70,7 @@ const TripDetails = (props) => {
     return <h1>Not Available</h1>;
   };
 
-  return TripDetails.length > 0 ? loadedPkg() : loading();
+  return pkg ? loadedPkg() : loading();
 };
 
 export default TripDetails;
