@@ -1,0 +1,40 @@
+.pkgs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pkgs-container {
+  display: flex;
+  justify-content: flex-start;
+  margin: 30px 0;
+}
+
+.pkg-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 30px;
+
+  .pkg-img {
+    width: 325px;
+    height: 90%;
+    border-radius: 30px;
+  }
+
+  .bookmark {
+    border-radius: 50%;
+    text-align: center;
+    width: 40px;
+    padding: 7px;
+    position: relative;
+    top: -20px;
+    left: 250px;
+    background: #fd5a5a;
+    color: white;
+  }
+
+  .pkg-name {
+    position: relative;
+    top: -10px;
+  }
+}

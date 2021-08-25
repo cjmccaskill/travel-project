@@ -1,0 +1,71 @@
+.tripdetails-head {
+  margin: 0 60px;
+  font-size: 1em;
+  position: relative;
+  top: -45px;
+}
+
+.tripdetails-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+}
+
+.pkg-tripdetails-card {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  margin: 20px;
+
+  img {
+    width: 100%;
+    height: 15vh;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+}
+
+.pkg-info-tripdetails {
+  display: grid;
+  grid-template-rows: 2fr 1fr 1fr;
+  padding: 0 0 0 15px;
+
+  h1 {
+    grid-row: 1 / 2;
+    font-size: 15px;
+    color: black;
+    display: flex;
+    align-items: center;
+  }
+
+  .pkg-dates-tripdetails {
+    grid-row: 2 / 3;
+    font-size: 11px;
+    color: #6b767b;
+    display: flex;
+    align-items: center;
+
+    .cal-icon {
+      color: rgb(25, 185, 193);
+      border-radius: 30%;
+      margin: 0 10px 0 0;
+    }
+  }
+}
+
+.price-tripdetails {
+  display: flex;
+  justify-content: flex-end;
+
+  .price-con {
+    font-size: 5px;
+    text-align: center;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background: #fd5a5a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

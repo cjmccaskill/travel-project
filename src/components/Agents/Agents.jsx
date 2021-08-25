@@ -1,5 +1,5 @@
 import React from "react";
-import { FaPaperPlane, FaGithub, FaGlobeAmericas } from "react-icons/fa";
+import { FaPaperPlane, FaLinkedin, FaGlobeAmericas } from "react-icons/fa";
 import "./Agents.scss";
 
 const Agents = (props) => {
@@ -10,12 +10,18 @@ const Agents = (props) => {
         <div className="agent-card" key={agent._id}>
           <img src={agent.img} alt={agent.name} />
           <div>{agent.name}</div>
-          <div>{agent.packages}</div>
+          {/* <div>{agent.packages}</div> */}
           <div>{agent.bio}</div>
           <div>
-            <FaPaperPlane {...agent.contactInfo} />
-            <FaGithub {...agent.contactInfo} />
-            <FaGlobeAmericas {...agent.contactInfo} />
+            <a href={agent.email}>
+              <FaPaperPlane />
+            </a>
+            <a href={agent.linkedIn}>
+              <FaLinkedin />
+            </a>
+            <a href={agent.website}>
+              <FaGlobeAmericas />
+            </a>
           </div>
         </div>
       ))}

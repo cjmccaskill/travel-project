@@ -9,20 +9,21 @@ import Agent from "./pages/Agent/Agent";
 import Agents from "./components/Agents/Agents";
 import UserLogin from "./components/UserLogin/UserLogin";
 import SignUp from "./pages/SignUp/SignUp";
-
 export const GlobalCtx = React.createContext(null)
+import TripDetails from "./pages/TripDetails/TripDetails";
+
 
 function App() {
   const url = "https://act-travel-project-api.herokuapp.com";
 
   //State for Auth token
-  const [gState, setGState] = React.useState({
+  const [gState, setGState] = useState({
     url : "https://act-travel-project-api.herokuapp.com",
     token: null,
   })
 
   //Confirming Login
-  React.useEffect(() => {
+ useEffect(() => {
     const token = JSON.parse(window.localStorage.getItem("token"))
     console.log(token)
     if (token){
@@ -70,6 +71,7 @@ function App() {
   }, []);
 
   return (
+
     <GlobalCtx.Provider value={{gState, setGState}}>
       <div className="App">
         <Header />
