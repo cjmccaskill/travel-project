@@ -1,44 +1,40 @@
 import React, { useState, useEffect } from "react";
 import { BsSearch } from "react-icons/bs";
 import "./SearchBar.scss";
+import TripDetails from "../../pages/TripDetails/TripDetails";
 
-const SearchBar = () => {
-  // const url = `https://act-travel-project-api.herokuapp.com/tripDetails`;
+const SearchBar = (props) => {
+  const { packages } = props;
 
-  const [query, setQuery] = useState([]);
+  const [search, setSearch] = useState("");
+  // const [list, setList] = useState({ packages });
 
-  // const getData = async () => {
-  //   const response = await fetch(url);
-  //   const data = await response.json();
-  //   setQuery(data);
-  // };
-
-  // useEffect(() => {
-  //   getData();
-  // }, []);
-
-  const handleSubmit = (e, search) => {
-    e.preventDefault();
-    console.log("Search input -", handleSubmit);
-    setQuery(search);
+  const handleSearch = (e) => {
+    console.log("Handle the change in the query input", e.target.value);
+    setSearch(e.target.value);
   };
 
-  const handleQuery = (e) => {
-    console.log("Handle the change in the query input", e.target.value);
-    setQuery({ ...query, [e.target.name]: e.traget.value });
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Search input -", handleSubmit);
+  
+    setSearch();
   };
 
   return (
     <div className="search-container">
-      <button htmlFor="search" onSubmit={handleSubmit}>
-        <BsSearch />
-      </button>
-      <input
-        id="search"
-        type="text"
-        placeholder="Packages"
-        onChange={handleQuery}
-      />
+      <form onSubmit={handleSubmit}>
+        <button type="submit">
+          <BsSearch />
+        </button>
+        <input
+          id="search"
+          type="text"
+          value={search}
+          placeholder="Packages"
+          onChange={handleSearch}
+        />
+      </form>
     </div>
   );
 };
