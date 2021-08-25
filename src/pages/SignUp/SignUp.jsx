@@ -31,7 +31,7 @@ const SignUp = (props) => {
       .then((data) => {
         console.log(data)
         setForm(blank)
-        props.history.push("/login")
+        props.history.push("/user/login")
       })
   }
 

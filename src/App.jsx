@@ -7,10 +7,28 @@ import Packages from "./components/Packages/Packages";
 import Home from "./pages/Home/Home";
 import Agent from "./pages/Agent/Agent";
 import Agents from "./components/Agents/Agents";
+import UserLogin from "./components/UserLogin/UserLogin";
 import SignUp from "./pages/SignUp/SignUp";
+
+export const GlobalCtx = React.createContext(null)
 
 function App() {
   const url = "https://act-travel-project-api.herokuapp.com";
+
+  //State for Auth token
+  const [gState, setGState] = React.useState({
+    url : "https://act-travel-project-api.herokuapp.com",
+    token: null,
+  })
+
+  //Confirming Login
+  React.useEffect(() => {
+    const token = JSON.parse(window.localStorage.getItem("token"))
+    console.log(token)
+    if (token){
+      setGState({...gState, token: token.token})
+    }
+  }, [])
 
   // Call the TripDetails API
   const [packages, setPackages] = useState([]);
@@ -52,37 +70,39 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <Header />
-      <main>
-        <Switch>
-          <Route exact path="/">
-            <Home packages={packages} agents={agents} />
-          </Route>
-          <Route exact path="/agent">
-            <Agents agents={agents} />
-          </Route>
-          <Route
-            exact
-            path="/tripDetails/:id"
-            render={(rp) => <Packages {...rp} />}
-          />
-          <Route exact path="/agent/:id" render={(rp) => <Agent {...rp} />} />
-          <Route exact path="/user" render={(rp) => <UserProfile {...rp} />} />
-          <Route
-            exact
-            path="/user/Login"
-            render={(rp) => <UserLogin {...rp} />}
-          />
-          <Route
-            exact
-            path="/user/signup"
-            render={(rp) => <SignUp {...rp} />}
-          />
-        </Switch>
-      </main>
-      <Footer />
-    </div>
+    <GlobalCtx.Provider value={{gState, setGState}}>
+      <div className="App">
+        <Header />
+        <main>
+          <Switch>
+            <Route exact path="/">
+              <Home packages={packages} agents={agents} />
+            </Route>
+            <Route exact path="/agent">
+              <Agents agents={agents} />
+            </Route>
+            <Route
+              exact
+              path="/tripDetails/:id"
+              render={(rp) => <Packages {...rp} />}
+            />
+            <Route exact path="/agent/:id" render={(rp) => <Agent {...rp} />} />
+            <Route exact path="/user" render={(rp) => <UserProfile {...rp} />} />
+            <Route
+              exact
+              path="/user/login"
+              render={(rp) => <UserLogin {...rp} />}
+            />
+            <Route
+              exact
+              path="/user/signup"
+              render={(rp) => <SignUp {...rp} />}
+            />
+          </Switch>
+        </main>
+        <Footer />
+      </div>
+    </GlobalCtx.Provider>
   );
 }
 
