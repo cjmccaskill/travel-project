@@ -6,14 +6,12 @@ const SearchBar = (props) => {
   const [packageName, setPackageName] = useState("");
 
   const handleChange = (e) => {
-    console.log("Handle the change in the search input", e.target.value);
     setPackageName(e.target.value);
   };
 
   const handleSubmit = (e) => {
-    e.preventDefualt();
+    e.preventDefault();
     props.handleSubmit(packageName);
-    setPackageName("");
   };
 
   return (
