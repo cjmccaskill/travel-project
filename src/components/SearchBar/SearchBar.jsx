@@ -3,33 +3,34 @@ import { BsSearch } from "react-icons/bs";
 import "./SearchBar.scss";
 
 const SearchBar = (props) => {
-  const [search, setSearch] = useState(props);
+  const [packageName, setPackageName] = useState("");
 
   const handleChange = (e) => {
-    console.log("Handle the change in the query input", e.target.value);
-    setSearch(e.target.value);
+    console.log("Handle the change in the search input", e.target.value);
+    setPackageName(e.target.value);
   };
 
-  // const displayPackages = pkgs.filter((pkg) => {
-  //   return pkg.packageName.toLowerCase().includes(search.toLowerCase())
-  // })
+  const handleSubmit = (e) => {
+    e.preventDefualt();
+    props.handleSubmit(packageName);
+    setPackageName("");
+  };
 
-  
   return (
-      <div className="search-container">
-        <form onSubmit={handleSubmit}>
-          <button type="submit">
-            <BsSearch />
-          </button>
-          <input
-            id="search"
-            type="text"
-            value={search}
-            placeholder="Packages"
-            onChange={handleChange}
-          />
-        </form>
-      </div>
+    <div className="search-container">
+      <form onSubmit={handleSubmit}>
+        <button type="submit">
+          <BsSearch />
+        </button>
+        <input
+          id="search"
+          type="text"
+          value={packageName}
+          placeholder="Packages"
+          onChange={handleChange}
+        />
+      </form>
+    </div>
   );
 };
 
