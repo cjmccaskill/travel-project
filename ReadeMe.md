@@ -20,32 +20,32 @@ Following the provided UX/UI design mockup and user flow chart, this mobile-frie
 
 | Component                        | Priority | Estimated Time | Time Invested | Actual Time |
 | -------------------------------- | :------: | :------------: | :-----------: | :---------: |
-| Build Repositories               |    H     |     15mins     |      hrs      |     hrs     |
-| Add dependencies, folders, files |    H     |     15mins     |      hrs      |     hrs     |
-| Set up Heroku / Deploy           |    H     |     15mins     |      hrs      |     hrs     |
-| Connecting Server                |    H     |      1hrs      |      hrs      |     hrs     |
-| Routes                           |    H     |      2hrs      |      hrs      |     hrs     |
-| Controllers                      |    H     |      2hrs      |      hrs      |     hrs     |
-| Agents/Seed Data                 |    H     |      2hrs      |      hrs      |     hrs     |
-| Install and set up react router  |    H     |     15mins     |      hrs      |     hrs     |
-| Set up pages and components      |    H     |      2hrs      |      hrs      |     hrs     |
-| Switch, Links, Routes            |    H     |      2hrs      |      hrs      |     hrs     |
-| Header (Menu Button & Login)     |    H     |      3hrs      |      hrs      |     hrs     |
-| Search bar                       |    H     |      2hrs      |      hrs      |     hrs     |
-| Packages Display                 |    H     |      3hrs      |      hrs      |     hrs     |
-| List of Agencies                 |    H     |      3hrs      |      hrs      |     hrs     |
-| Reusable components on trip page |    H     |      3hrs      |      hrs      |     hrs     |
-| Signup/Login form                |    H     |      3hrs      |      hrs      |     hrs     |
-| Making everything communicates   |    H     |      2hrs      |      hrs      |     hrs     |
-| Group debugging                  |    H     |      3hrs      |      hrs      |     hrs     |
-| Responsiveness                   |    M     |      3hrs      |      hrs      |     hrs     |
-| Home Page Styling                |    M     |      3hrs      |      hrs      |     hrs     |
-| Agencies Page Styling            |    M     |      3hrs      |      hrs      |     hrs     |
-| Trip Details Page Styling        |    M     |      3hrs      |      hrs      |     hrs     |
-| User Page Styling                |    M     |      3hrs      |      hrs      |     hrs     |
-| Git pull requests/approval       |    H     |      4hrs      |      hrs      |     hrs     |
-| Group stand ups                  |    M     |      2hrs      |      hrs      |     hrs     |
-| Total                            |    H     |     55hrs      |      hrs      |     hrs     |
+| Build Repositories               |    H     |     15mins     |     .25 hrs      |     .25hrs     |
+| Add dependencies, folders, files |    H     |     15mins     |      .25 hrs      |     .25 hrs     |
+| Set up Heroku / Deploy           |    H     |     15mins     |      .25 hrs      |     .25 hrs     |
+| Connecting Server                |    H     |      1hrs      |      .5hrs      |     .5hrs     |
+| Routes                           |    H     |      2hrs      |      2hrs      |     2hrs     |
+| Controllers                      |    H     |      2hrs      |      1hrs      |     1hrs     |
+| Agents/Seed Data                 |    H     |      2hrs      |      2hrs      |     2hrs     |
+| Install and set up react router  |    H     |     15mins     |      .25hrs      |     .25hrs     |
+| Set up pages and components      |    H     |      2hrs      |      2hrs      |     2hrs     |
+| Switch, Links, Routes            |    H     |      2hrs      |      1hrs      |     1hrs     |
+| Header (Menu Button & Login)     |    H     |      3hrs      |      3hrs      |     3hrs     |
+| Search bar                       |    H     |      2hrs      |      3hrs      |     3hrs     |
+| Packages Display                 |    H     |      3hrs      |      4hrs      |     4hrs     |
+| List of Agencies                 |    H     |      3hrs      |      3hrs      |     3hrs     |
+| Reusable components on trip page |    H     |      3hrs      |      3hrs      |     3hrs     |
+| Signup/Login form                |    H     |      3hrs      |      4hrs      |     4hrs     |
+| Making everything communicates   |    H     |      2hrs      |      2hrs      |     2hrs     |
+| Group debugging                  |    H     |      3hrs      |      3hrs      |     3hrs     |
+| Responsiveness                   |    M     |      3hrs      |      3hrs      |     3hrs     |
+| Home Page Styling                |    M     |      3hrs      |      3hrs      |     3hrs     |
+| Agencies Page Styling            |    M     |      3hrs      |      3hrs      |     3hrs     |
+| Trip Details Page Styling        |    M     |      3hrs      |      3hrs      |     3hrs     |
+| User Page Styling                |    M     |      3hrs      |      1hrs      |     1hrs     |
+| Git pull requests/approval       |    H     |      4hrs      |      3hrs      |     3hrs     |
+| Group stand ups                  |    M     |      2hrs      |      2hrs      |     2hrs     |
+| Total                            |    H     |     55hrs      |     52.5 hrs      |    52.5 hrs     |
 
 | Component                      | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------------ | :------: | :------------: | :-----------: | :---------: |
