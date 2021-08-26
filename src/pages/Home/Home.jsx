@@ -7,7 +7,7 @@ import FeaturedAgents from "../../components/FeaturedAgents/FeaturedAgents";
 const Home = (props) => {
   return (
     <div className="home-container">
-      <SearchBar packages={props.packages}/>
+      <SearchBar packages={props.packages} />
       <FeaturedPackages packages={props.packages} />
       <FeaturedAgents agents={props.agents} />
     </div>

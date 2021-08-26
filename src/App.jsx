@@ -34,7 +34,7 @@ function App() {
   const [packages, setPackages] = useState([]);
 
   const getPackages = async () => {
-    const response = await fetch(url + "/tripDetails");
+    const response = await fetch(url + "/tripdetails");
     const data = await response.json();
     setPackages(data);
   };
@@ -69,6 +69,9 @@ function App() {
     getUsers();
   }, []);
 
+
+  
+
   return (
     <GlobalCtx.Provider value={{ gState, setGState }}>
       <div className="App">
@@ -81,12 +84,12 @@ function App() {
             <Route exact path="/agents">
               <Agents agents={agents} />
             </Route>
-            <Route exact path="/tripDetails">
+            <Route exact path="/tripdetails">
               <Packages packages={packages} />
             </Route>
             <Route
               exact
-              path="/tripDetails/:id"
+              path="/tripdetails/:id"
               render={(rp) => <TripDetails {...rp} />}
             />
             <Route exact path="/agent/:id" render={(rp) => <Agent {...rp} />} />
