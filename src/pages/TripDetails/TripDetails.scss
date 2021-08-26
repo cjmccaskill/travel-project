@@ -60,6 +60,7 @@
 
   .plane-one {
     margin-right: 10px;
+    color: rgb(66, 188, 188);
   }
 }
 
@@ -142,18 +143,60 @@
   gap: 15px;
   width: 100%;
 
-  img.one {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .one {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
   }
 
-  img.two {
+  .two {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
   }
 
-  img.three {
-    grid-column: 3 / 3;
+  .three {
+    grid-column: 2 / 3;
     grid-row: 2 / 3;
+  }
+}
+
+.price {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+
+  .cost {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    p {
+      font-size: 1.2em;
+    }
+
+    .amount {
+      display: flex;
+      align-items: center;
+
+      h1 {
+        font-size: 2.5em;
+      }
+    }
+  }
+
+  button {
+    padding: 25px;
+    font-size: 1.5em;
+    border-radius: 50px;
+    border: none;
+    background-color: rgb(66, 188, 188);
+    color: white;
   }
 }

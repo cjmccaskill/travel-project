@@ -69,18 +69,28 @@ const TripDetails = (props) => {
               {pkg.hotel}
             </div>
             <div className="trip-photos-arr">
-              <img src={pkg.photos?.[0]} className="one" />
-              <img src={pkg.photos?.[1]} className="two" />
-              <img src={pkg.photos?.[2]} className="three" />
+              <div className="one">
+                <img src={pkg.photos?.[0]} />
+              </div>
+              <div className="two">
+                <img src={pkg.photos?.[1]} />
+              </div>
+              <div className="three">
+                <img src={pkg.photos?.[2]} />
+              </div>
             </div>
           </div>
           <div className="price">
             <div className="cost">
               <p className="tc">Total Cost</p>
-              <h1>${pkg.payment}</h1>
-              <p>/Person</p>
+              <div className="amount">
+                <h1>${pkg.payment}</h1>
+                <p>/Person</p>
+              </div>
             </div>
-            <button className="book-now">Book Now</button>
+            <button className="book-now">
+              <h4>Book Now</h4>
+            </button>
           </div>
         </div>
       </div>
