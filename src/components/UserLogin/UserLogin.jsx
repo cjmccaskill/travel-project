@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"
 import { GlobalCtx } from "../../App";
 import "./UserLogin.scss";
 
@@ -60,6 +61,7 @@ const UserLogin = (props) => {
           value="Login"
         />
       </form>
+      <Link to="/user/signup">Sign Up!</Link>
     </div>
   )
 };

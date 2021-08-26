@@ -20,6 +20,7 @@ const Header = () => {
     { link: "/agents", text: "Explore Agents" },
     { link: "/user/userprofile", text: "My Account" },
   ];
+  
   return (
     <div className="header">
       <div className="nav-bar">

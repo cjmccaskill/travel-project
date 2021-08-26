@@ -7,6 +7,7 @@ import Packages from "./components/Packages/Packages";
 import Home from "./pages/Home/Home";
 import Agent from "./pages/Agent/Agent";
 import Agents from "./components/Agents/Agents";
+import UserProfile from "./pages/UserProfile/UserProfile";
 import UserLogin from "./components/UserLogin/UserLogin";
 import SignUp from "./pages/SignUp/SignUp";
 export const GlobalCtx = React.createContext(null);
@@ -92,8 +93,8 @@ function App() {
             <Route exact path="/agent/:id" render={(rp) => <Agent {...rp} />} />
             <Route
               exact
-              path="/user"
-              render={(rp) => <UserProfile {...rp} />}
+              path="/user/userprofile"
+              render={(rp) => gState.token ? <UserProfile {...rp} /> : <UserLogin />}
             />
             <Route
               exact
