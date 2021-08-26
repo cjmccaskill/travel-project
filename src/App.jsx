@@ -25,7 +25,6 @@ function App() {
   //Confirming Login
   useEffect(() => {
     const token = JSON.parse(window.localStorage.getItem("token"));
-    console.log(token);
     if (token) {
       setGState({ ...gState, token: token.token });
     }
@@ -70,17 +69,6 @@ function App() {
     getUsers();
   }, []);
 
-
-  const handleSubmit = async (packageName) => {
-    console.log("Hnadle submit for trip details", packageName)
-    const response = await fetch(url + '/tripdetails/' + _id)
-    const data = await response.json()
-    setPackages(data)
-  }
-
-
-  
-
   return (
     <GlobalCtx.Provider value={{ gState, setGState }}>
       <div className="App">
@@ -88,7 +76,7 @@ function App() {
         <main>
           <Switch>
             <Route exact path="/">
-              <Home handleSubmit={handleSubmit} packages={packages} agents={agents} />
+              <Home packages={packages} agents={agents} />
             </Route>
             <Route exact path="/agents">
               <Agents agents={agents} />
@@ -105,7 +93,9 @@ function App() {
             <Route
               exact
               path="/user/userprofile"
-              render={(rp) => gState.token ? <UserProfile {...rp} /> : <UserLogin />}
+              render={(rp) =>
+                gState.token ? <UserProfile {...rp} /> : <UserLogin />
+              }
             />
             <Route
               exact
