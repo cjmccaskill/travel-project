@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { BiMap } from "react-icons/bi";
 import { RiBookmark2Line } from "react-icons/ri";
+import { FaCalendarAlt } from "react-icons/fa";
 import "./FeaturedPackages.scss";
 
 const FeaturedPackages = (props) => {
@@ -30,18 +31,23 @@ const FeaturedPackages = (props) => {
         pkg.location.toLowerCase().includes(props.location.toLowerCase())
       )
       .map((pkg) => (
-        <div className="pkg-card" key={pkg._id}>
+        <Link to={`/tripdetails/{$pkg._id}`} className="pkg-card" key={pkg._id}>
           <img src={pkg.img} alt={pkg.name} className="pkg-img" />
           <div className="bookmark">
             <RiBookmark2Line />
           </div>
-          <div className="pkg-name">{pkg.packageName}</div>
-          <a href={pkg.location} className="pkg-location">
-            <BiMap />
-            {pkg.location}
-          </a>
-          <div className="pkg-dates">{pkg.dates}</div>
-        </div>
+          <h3 className="pkg-name">{pkg.packageName}</h3>
+          <div className="pkg-details">
+            <a href={pkg.location} className="pkg-location">
+              <BiMap className="map-icon" />
+              {pkg.location}
+            </a>
+            <div className="pkg-dates">
+              <FaCalendarAlt className="fp-cal-icon" />
+              {pkg.dates}
+            </div>
+          </div>
+        </Link>
       ));
   };
 
