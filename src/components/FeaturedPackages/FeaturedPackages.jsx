@@ -27,7 +27,7 @@ const FeaturedPackages = (props) => {
   const filteredPackages = () => {
     return packages
       .filter((pkg) =>
-        pkg.location[0].toLowerCase().includes(props.location.toLowerCase())
+        pkg.location.toLowerCase().includes(props.location.toLowerCase())
       )
       .map((pkg) => (
         <div className="pkg-card" key={pkg._id}>
