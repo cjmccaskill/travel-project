@@ -8,14 +8,14 @@ const UserProfile = (props) => {
   const { gState, setGState } = React.useContext(GlobalCtx)  
 
   const returnHome = (
-    <button onClick={() => {
+    <button className="home" onClick={() => {
       props.history.push("/")
     }}>Return Home</button>
   )
 
   const logout = (
     <Link>
-      <button onClick={() => {
+      <button className="logout" onClick={() => {
         window.localStorage.removeItem("token")
         setGState({...gState, token: null})
         props.history.push("/")
@@ -24,7 +24,7 @@ const UserProfile = (props) => {
   )
 
   return (
-    <div>
+    <div className="profilebuttons">
       {returnHome}
       {gState.token ? logout : null}
     </div>
