@@ -26,8 +26,9 @@ const SearchBar = (props) => {
           id="search"
           type="text"
           value={packageName}
-          placeholder="Packages"
+          placeholder="Search Packages"
           onChange={handleChange}
+          className="search-placeholder"
         />
       </form>
     </div>
