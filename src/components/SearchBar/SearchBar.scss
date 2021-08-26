@@ -1,7 +1,7 @@
 .search-container {
   background-color: whitesmoke;
-  width: 60vw;
-  // margin: 0 auto;
+  width: 65vw;
+  margin: 20px;
 
   form {
     display: flex;
@@ -19,7 +19,7 @@
     }
 
     #search {
-      margin-left: 3px;
+      margin-left: 10px;
       padding-left: 5px;
       width: 90%;
       border: none;
