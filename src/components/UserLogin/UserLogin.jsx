@@ -43,27 +43,27 @@ const UserLogin = (props) => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <input
+      <form className="loginform" onSubmit={handleSubmit}>
+        <input className="username"
           type="text"
           name="username"
           placeholder="Username"
           value={form.username}
           onChange={handleChange}
         />
-        <input
+        <input className="password"
           type="password"
           name="password"
           placeholder="Password"
           value={form.password}
           onChange={handleChange}
         />
-         <input
+         <input className="loginbttn"
           type="submit"
           value="Login"
         />
       </form>
-      <Link to="/user/signup">Sign Up!</Link>
+      <Link className="signuplink" to="/user/signup">Sign Up!</Link>
     </div>
   )
 };

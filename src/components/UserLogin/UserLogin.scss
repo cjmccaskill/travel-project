@@ -1,0 +1,56 @@
+.loginform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+
+}
+
+.username {
+    text-align: center;
+    margin-bottom: 10%;
+    width: 175px;
+
+}
+
+.password {
+    text-align: center;
+    width: 175px;
+
+}
+
+.loginbttn {
+    text-align: center;
+    margin-top: 20%;
+    margin-bottom: 7%;
+    width: 215px;
+    border-radius: 20px;
+
+}
+
+.signuplink {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+input[type=text] {
+    background-color: #3CBC8D;
+    box-sizing: border-box;
+    font-size: larger;
+
+}
+
+input[type=password] {
+    background-color: #3CBC8D;
+    box-sizing: border-box;
+    font-size: larger;
+
+}
+
+input[type=submit] {
+    background-color: #3CBC8D;
+    box-sizing: border-box;
+    font-size: larger;
+
+}
