@@ -26,41 +26,71 @@ const TripDetails = (props) => {
   const loadedPkg = () => {
     return (
       <div className="trip-pkg-container">
+        <img src={pkg.img} alt={pkg.packageName} className="trip-pkg-img" />
         <div className="trip-pkg-card" key={""}>
-          <img src={pkg.img} alt={pkg.packageName} className="trip-pkg-img" />
+          <RiBookmark2Line className="td-bookmark" />
           <div className="trip-pkg-info">
-            <RiBookmark2Line className="bookmark" />
             <h1>{pkg.packageName}</h1>
-            <AiFillStar className="star">4.9</AiFillStar>
-            <a href={pkg.agentInfo?.email}>
-              <FaPaperPlane />
-            </a>
+            <div className="rating">
+              <AiFillStar className="td-star" />
+              <p>4.9</p>
+            </div>
+            <div className="td-contact">
+              <a href={pkg.agentInfo?.email}>
+                <FaPaperPlane className="plane-one" />
+              </a>
+              <p>{pkg.packageName}</p>
+            </div>
+          </div>
+          <div className="td-plan">
+            <h2>Trip Plan</h2>
+            {pkg.description}
           </div>
           <Link to="/agent/:id" className="trip-agent-info">
             <img src={pkg.agentInfo?.img} alt="" />
-            <div>
-              <div>Hosted by</div>
-              <div>{pkg.agentInfo?.name}</div>
+            <div className="trip-agent-text">
+              <h3>Hosted by</h3>
+              <h3>{pkg.agentInfo?.name}</h3>
             </div>
+            <a href={pkg.agentInfo?.email} className="email-agent">
+              <FaPaperPlane className="plane-two" />
+            </a>
           </Link>
           <div className="included">
+            <h2>What's Included?</h2>
             <div className="transport">
-              <FaDotCircle>{pkg.vehicle}</FaDotCircle>
-              Transport
+              <h4>Transport</h4>
+              <FaDotCircle className="dot one" />
+              {pkg.vehicle}
             </div>
             <div className="hotel">
-              <FaDotCircle>{pkg.vehicle}</FaDotCircle>
-              Hotel
+              <h4>Hotel</h4>
+              <FaDotCircle className="dot two" />
+              {pkg.hotel}
             </div>
-            <div className="trip-photos-arr">{pkg.photos}</div>
+            <div className="trip-photos-arr">
+              <div className="one">
+                <img src={pkg.photos?.[0]} />
+              </div>
+              <div className="two">
+                <img src={pkg.photos?.[1]} />
+              </div>
+              <div className="three">
+                <img src={pkg.photos?.[2]} />
+              </div>
+            </div>
           </div>
           <div className="price">
             <div className="cost">
               <p className="tc">Total Cost</p>
-              <h1>${pkg.payment}</h1>
-              <p>/Person</p>
+              <div className="amount">
+                <h1>${pkg.payment}</h1>
+                <p>/Person</p>
+              </div>
             </div>
-            <button className="book-now">Book Now</button>
+            <button className="book-now">
+              <h4>Book Now</h4>
+            </button>
           </div>
         </div>
       </div>
