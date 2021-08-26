@@ -10,14 +10,18 @@ const FeaturedPackages = (props) => {
   return (
     <>
       <div className="pkgs-header">
-        <h1>Packages</h1>
+        <h1>Popular Packages</h1>
         <Link to="/tripdetails" className="see-pkgs">
           See All
         </Link>
       </div>
       <div className="pkgs-container">
         {packages.map((pkg) => (
-          <div className="pkg-card" key={pkg._id}>
+          <Link
+            to={`/tripdetails/${pkg._id}`}
+            className="pkg-card"
+            key={pkg._id}
+          >
             <img src={pkg.img} alt={pkg.name} className="pkg-img" />
             <div className="bookmark">
               <RiBookmark2Line />
@@ -33,7 +37,7 @@ const FeaturedPackages = (props) => {
                 {pkg.dates}
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </>
