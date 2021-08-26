@@ -20,7 +20,6 @@ const TripDetails = (props) => {
 
   useEffect(() => {
     getPkgs();
-    // .then((data) => setPkg(data))
   }, []);
 
   const loadedPkg = () => {
