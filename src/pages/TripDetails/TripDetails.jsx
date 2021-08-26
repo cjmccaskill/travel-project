@@ -45,7 +45,7 @@ const TripDetails = (props) => {
             <h2>Trip Plan</h2>
             {pkg.description}
           </div>
-          <Link to="/agent/:id" className="trip-agent-info">
+          <Link to={`/agent/${pkg.agentInfo?._id}`} className="trip-agent-info">
             <img src={pkg.agentInfo?.img} alt="" />
             <div className="trip-agent-text">
               <h3>Hosted by</h3>

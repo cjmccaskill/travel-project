@@ -10,7 +10,7 @@ const FeaturedPackages = (props) => {
 
   const allPackages = () => {
     return packages.map((pkg) => (
-      <div className="pkg-card" key={pkg._id}>
+      <Link to={`/tripdetails/${pkg._id}`} className="pkg-card" key={pkg._id}>
         <img src={pkg.img} alt={pkg.name} className="pkg-img" />
         <div className="bookmark">
           <RiBookmark2Line />
@@ -21,7 +21,7 @@ const FeaturedPackages = (props) => {
           {pkg.location}
         </a>
         <div className="pkg-dates">{pkg.dates}</div>
-      </div>
+      </Link>
     ));
   };
 
@@ -31,7 +31,7 @@ const FeaturedPackages = (props) => {
         pkg.location.toLowerCase().includes(props.location.toLowerCase())
       )
       .map((pkg) => (
-        <Link to={`/tripdetails/{$pkg._id}`} className="pkg-card" key={pkg._id}>
+        <Link to={`/tripdetails/${pkg._id}`} className="pkg-card" key={pkg._id}>
           <img src={pkg.img} alt={pkg.name} className="pkg-img" />
           <div className="bookmark">
             <RiBookmark2Line />
