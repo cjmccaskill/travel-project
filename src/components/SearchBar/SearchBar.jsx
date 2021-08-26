@@ -10,7 +10,7 @@ const SearchBar = (props) => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefualt();
+    e.preventDefault();
     props.handleSubmit(packageName);
   };
 
