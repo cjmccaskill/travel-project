@@ -10,13 +10,15 @@
     text-align: center;
     margin-bottom: 10%;
     width: 175px;
-
+    border: none;
+    border-bottom: 1px solid black;
 }
 
 .password {
     text-align: center;
     width: 175px;
-
+    border: none;
+    border-bottom: 1px solid black;
 }
 
 .loginbttn {
@@ -25,7 +27,7 @@
     margin-bottom: 7%;
     width: 215px;
     border-radius: 20px;
-
+    color: white;
 }
 
 .signuplink {
@@ -35,21 +37,19 @@
 }
 
 input[type=text] {
-    background-color: #3CBC8D;
     box-sizing: border-box;
     font-size: larger;
 
 }
 
 input[type=password] {
-    background-color: #3CBC8D;
     box-sizing: border-box;
     font-size: larger;
 
 }
 
 input[type=submit] {
-    background-color: #3CBC8D;
+    background-color: rgb(66, 188, 188);
     box-sizing: border-box;
     font-size: larger;
 
