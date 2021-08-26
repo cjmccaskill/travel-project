@@ -11,7 +11,7 @@ const Packages = (props) => {
       <div className="tripdetails-container">
         {packages.map((pkg) => (
           <Link
-            to={`/tripDetails/${pkg._id}`}
+            to={`/tripdetails/${pkg._id}`}
             className="pkg-tripdetails-card"
             key={pkg._id}
           >
