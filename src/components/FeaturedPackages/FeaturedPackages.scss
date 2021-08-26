@@ -2,23 +2,26 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 16px;
 }
 .pkgs-container {
   display: flex;
   justify-content: flex-start;
-  margin: 30px 0;
+  margin: 20px 0;
   overflow: scroll;
+  padding: 20px 0;
 }
 
 .pkg-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 0 30px;
+  margin: 0 20px;
 
   .pkg-img {
-    width: 325px;
-    height: 90%;
+    width: 30vh;
+    max-height: 20vh;
+    object-fit: cover;
     border-radius: 30px;
   }
 
@@ -29,13 +32,36 @@
     padding: 7px;
     position: relative;
     top: -20px;
-    left: 250px;
+    left: 180px;
     background: #fd5a5a;
     color: white;
   }
 
   .pkg-name {
     position: relative;
-    top: -10px;
+    top: -15px;
+  }
+
+  a {
+    color: grey;
+  }
+  .pkg-details {
+    font-size: 12px;
+    color: grey;
+    display: flex;
+    justify-content: space-between;
+
+    .map-icon {
+      background: #f9c3c3;
+      color: #fd5a5a;
+      border-radius: 50%;
+      margin: 0 5px 0 0;
+    }
+
+    .fp-cal-icon {
+      color: rgb(25, 185, 193);
+      border-radius: 30%;
+      margin: 0 5px 0 0;
+    }
   }
 }
