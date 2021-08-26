@@ -70,6 +70,14 @@ function App() {
   }, []);
 
 
+  const handleSubmit = async (packageName) => {
+    console.log("Hnadle submit for trip details", packageName)
+    const response = await fetch(url + '/tripdetails/' + _id)
+    const data = await response.json()
+    setPackages(data)
+  }
+
+
   
 
   return (
@@ -79,7 +87,7 @@ function App() {
         <main>
           <Switch>
             <Route exact path="/">
-              <Home packages={packages} agents={agents} />
+              <Home handleSubmit={handleSubmit} packages={packages} agents={agents} />
             </Route>
             <Route exact path="/agents">
               <Agents agents={agents} />
