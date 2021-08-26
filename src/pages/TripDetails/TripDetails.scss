@@ -1,8 +1,159 @@
-.trip-pkg-card {
+//head photo
+.trip-pkg-img {
   width: 100%;
-  overflow: hidden;
+  border-radius: 50px 50px 0 0;
+}
+
+//bookmark
+.td-bookmark {
+  text-align: center;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  padding: 16px;
+  position: relative;
+  left: 40%;
+  display: block;
+  background: #fd5a5a;
+  color: white;
+}
+
+// entire card
+.trip-pkg-card {
+  background-color: white;
+  font-size: 12px;
+  position: relative;
+  top: -50px;
+  border-radius: 50px;
+  padding: 0 35px;
+}
+
+// trip information header
+.trip-pkg-info {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+
+  h1 {
+    font-size: 2.5em;
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+  }
+  .rating {
+    display: flex;
+    font-size: 1.2em;
+    padding: 15px 0;
+    grid-column: 1 / 2;
+
+    .td-star {
+      color: gold;
+      margin-right: 10px;
+    }
+  }
+
+  .td-contact {
+    display: flex;
+    font-size: 1.2em;
+    padding: 15px 0;
+    grid-column: 2 / 4;
+  }
+
+  .plane-one {
+    margin-right: 10px;
+  }
+}
+
+// trip description
+.td-plan {
+  h2 {
+    padding-bottom: 15px;
+  }
+}
+
+// agent info box
+.trip-agent-info {
+  // display: flex;
+  // justify-content: space-evenly;
+  // align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  margin: 20px;
 
   img {
-    width: 100%;
+    border-radius: 50%;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+  }
+
+  .trip-agent-text {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .email-agent {
+    background: rgb(29, 139, 198);
+    margin: auto;
+    padding: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .plane-two {
+    color: white;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+// What's Included? section
+
+.included {
+  padding: 20px 0;
+
+  .transport {
+    padding: 10px 0 0 0;
+  }
+
+  .hotel {
+    padding: 10px 0;
+  }
+
+  .transport h4,
+  .hotel h4 {
+    padding: 10px 0;
+  }
+
+  .dot {
+    margin-right: 10px;
+  }
+}
+
+// photos grid
+
+.trip-photos-arr {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 15px;
+  width: 100%;
+
+  img.one {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+  }
+
+  img.two {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  img.three {
+    grid-column: 3 / 3;
+    grid-row: 2 / 3;
   }
 }
