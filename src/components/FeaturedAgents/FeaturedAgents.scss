@@ -1,39 +1,44 @@
 a {
   text-decoration: none;
+  color: black;
 }
 
 .featured-agents-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 20px;
+  font-size: 13px;
+  margin: 10px 0;
 
   .featured-see-agents {
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: rgb(100, 100, 100);
   }
 }
 
 .featured-card-container {
   display: flex;
-  justify-content: space-between;
+  margin: 20px 0;
+  overflow: scroll;
+  padding: 20px 0;
 }
 
 .featured-agent-container {
   padding: 15px;
-  box-shadow: 1px 1px 10px 4px rgba(128, 128, 128, 0.342);
+  box-shadow: 1px 1px 10px 4px rgba(145, 145, 145, 0.342);
   border-radius: 15px;
-  width: 70vw;
-  height: 20vh;
+  min-width: 220px;
+  height: 14vh;
   margin: 0 10px;
-  background-color: whitesmoke;
 }
 
 .featured-agent-img {
-  width: 8rem;
-  height: 8rem;
-  border-radius: 100%;
+  object-fit: cover;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
 }
 
 .featured-agent-card {
@@ -42,15 +47,26 @@ a {
   padding-top: 15px;
 }
 
-.featured-card-info {
-  padding-top: 30px;
+.featured-agent-name {
   text-align: center;
-  width: 9rem;
-  font-size: 1.5rem;
+  font-size: 0.8rem;
   color: black;
 }
 
+.fa-rating {
+  display: flex;
+
+  .fa-star {
+    color: gold;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
+
 .featured-more-info {
-  color: rgb(0, 0, 158);
-  font-weight: 700;
+  color: rgb(47, 60, 93);
+  font-weight: 600;
+  font-size: 12px;
 }

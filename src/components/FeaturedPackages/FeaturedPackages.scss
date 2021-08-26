@@ -2,7 +2,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 14px;
+  font-size: 13px;
+  margin: 10px 0;
+
+  .see-pkgs {
+    text-decoration: none;
+    font-size: 1rem;
+    color: rgb(100, 100, 100);
+  }
 }
 .pkgs-container {
   display: flex;
