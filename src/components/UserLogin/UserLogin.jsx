@@ -47,12 +47,14 @@ const UserLogin = (props) => {
         <input
           type="text"
           name="username"
+          placeholder="Username"
           value={form.username}
           onChange={handleChange}
         />
         <input
           type="password"
           name="password"
+          placeholder="Password"
           value={form.password}
           onChange={handleChange}
         />
