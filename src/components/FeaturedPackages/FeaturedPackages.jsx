@@ -10,18 +10,25 @@ const FeaturedPackages = (props) => {
 
   const allPackages = () => {
     return packages.map((pkg) => (
-      <Link to={`/tripdetails/${pkg._id}`} className="pkg-card" key={pkg._id}>
-        <img src={pkg.img} alt={pkg.name} className="pkg-img" />
-        <div className="bookmark">
-          <RiBookmark2Line />
+      <div className="pkg-card" key={pkg._id}>
+        <Link to={`/tripdetails/${pkg._id}`}>
+          <img src={pkg.img} alt={pkg.name} className="pkg-img" />
+          <div className="bookmark">
+            <RiBookmark2Line />
+          </div>
+          <div className="pkg-name">{pkg.packageName}</div>
+        </Link>
+        <div className="pkg-details">
+          <div className="pkg-location">
+            <BiMap className="map-icon" />
+            {pkg.location}
+          </div>
+          <div className="pkg-dates">
+            <FaCalendarAlt className="fp-cal-icon" />
+            {pkg.dates}
+          </div>
         </div>
-        <div className="pkg-name">{pkg.packageName}</div>
-        <a href={pkg.location} className="pkg-location">
-          <BiMap />
-          {pkg.location}
-        </a>
-        <div className="pkg-dates">{pkg.dates}</div>
-      </Link>
+      </div>
     ));
   };
 
