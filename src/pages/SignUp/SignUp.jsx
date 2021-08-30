@@ -8,36 +8,36 @@ const SignUp = (props) => {
     fullName: "",
     username: "",
     password: "",
-  }
+  };
 
-  const [form, setForm] = React.useState(blank)
+  const [form, setForm] = React.useState(blank);
 
   const handleChange = (event) => {
-    setForm({...form, [event.target.name]: event.target.value})
-  }
+    setForm({ ...form, [event.target.name]: event.target.value });
+  };
 
   const handleSubmit = (event) => {
-    event.preventDefault()
-    const { fullName, username, password } = form
-  
+    event.preventDefault();
+    const { fullName, username, password } = form;
+
     fetch(`${url}/user/signup`, {
       method: "post",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({fullName, username, password}),
+      body: JSON.stringify({ fullName, username, password }),
     })
       .then((response) => response.json())
       .then((data) => {
-        setForm(blank)
-        props.history.push("/user/login")
-      })
-  }
+        setForm(blank);
+        props.history.push("/user/login");
+      });
+  };
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-      <input
+      <form className="signupform" onSubmit={handleSubmit}>
+        <input
           type="text"
           name="fullName"
           placeholder="Full name"
@@ -58,13 +58,10 @@ const SignUp = (props) => {
           value={form.password}
           onChange={handleChange}
         />
-         <input
-          type="submit"
-          value="Sign Up!"
-        />
+        <input type="submit" value="Sign Up!" />
       </form>
     </div>
-  )
+  );
 };
 
 export default SignUp;
