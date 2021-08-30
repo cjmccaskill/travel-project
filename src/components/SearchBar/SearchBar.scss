@@ -1,14 +1,16 @@
 .search-container {
   background-color: white;
-  width: 65vw;
+  max-width: 100%;
   margin: 20px;
 
   form {
     display: flex;
     flex-direction: row;
+    margin: 0;
 
     input {
       margin: 0;
+      text-align: left;
     }
 
     button {
@@ -28,13 +30,14 @@
       padding-left: 5px;
       width: 90%;
       border: none;
-      background-color: white
+      background-color: white;
     }
   }
 }
 
-::placeholder {
+.search-placeholder::placeholder {
   font-size: 0.8em;
   font-weight: 700;
-  color: rgb(47, 60, 93);
+  color: rgba(47, 60, 93, 0.695);
+  text-align: left;
 }

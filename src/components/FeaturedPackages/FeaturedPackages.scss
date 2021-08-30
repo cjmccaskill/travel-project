@@ -53,24 +53,29 @@
   a {
     color: grey;
   }
-  .pkg-details {
-    text-decoration: none;
-    font-size: 12px;
-    color: grey;
-    display: flex;
-    justify-content: space-between;
+}
 
-    .map-icon {
-      background: #f9c3c3;
-      color: #fd5a5a;
-      border-radius: 50%;
-      margin: 0 5px 0 0;
-    }
+.pkg-details {
+  text-decoration: none;
+  font-size: 14px;
+  color: grey;
+  display: flex;
+  justify-content: flex-start;
 
-    .fp-cal-icon {
-      color: rgb(25, 185, 193);
-      border-radius: 30%;
-      margin: 0 5px 0 0;
-    }
+  .pkg-location {
+    padding-right: 20px;
+  }
+
+  .map-icon {
+    background: #f9c3c3;
+    color: #fd5a5a;
+    border-radius: 50%;
+    margin: 0 5px 0 0;
+  }
+
+  .fp-cal-icon {
+    color: rgb(25, 185, 193);
+    border-radius: 30%;
+    margin: 0 5px 0 0;
   }
 }

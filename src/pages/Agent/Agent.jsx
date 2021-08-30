@@ -53,7 +53,7 @@ const Agent = (props) => {
             {agent.bio}
           </div>
           <div className="agent-profile-email-agent">
-            <a href={agent.email}>
+            <a href={`mailto:${agent.email}`} target="_blank">
               <FaPaperPlane className="plane" />
               <span>Chat with us</span>
             </a>
